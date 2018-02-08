@@ -1,0 +1,24 @@
+@import 'nib'
+
+.loading
+	absolute top right bottom left
+	text-align center
+	z-index 1000
+
+	.filter
+		absolute top right bottom left
+		background-color #fff
+		opacity .4
+
+	i
+		absolute top 50% left 50%
+		color #555
+		font-size 20px
+		margin -10px 0 0 -10px
+
+	&.page-loading
+		position fixed
+
+		i
+			font-size 70px
+			margin -35px 0 0 -35px

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+nodemon -e js,json -w ./core --ignore ./core/client ./core/app.js

@@ -1,0 +1,18 @@
+{
+  "server": {
+    "host": "localhost",
+    "port": 3000,
+    "secure": false
+  },
+  "app": {
+    "debug": false,
+    "optimized": false,
+    "resourceRoot": "/<%= version %>",
+    "publicDir": "client",
+    "baseUrl": "http://localhost:3000/",
+    "platformUrl" : "http://localhost:5000"
+  },
+  "stripe": {
+    "publicKey": "pk_test_2JHJ43RIJ8pFjbexB9vp03YU"
+  }
+}

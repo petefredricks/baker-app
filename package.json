@@ -1,0 +1,40 @@
+{
+  "name": "baker-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "grunt build",
+    "start": "./bin/start",
+    "lint": "grunt lint"
+  },
+  "dependencies": {
+    "asset-worker": "0.1.0",
+    "async": "2.0.1",
+    "grunt": "1.0.1",
+    "grunt-aws": "0.6.2",
+    "grunt-contrib-clean": "1.0.0",
+    "grunt-contrib-concat": "1.0.1",
+    "grunt-contrib-copy": "1.0.0",
+    "grunt-contrib-cssmin": "1.0.2",
+    "grunt-contrib-jade": "1.0.0",
+    "grunt-contrib-stylus": "1.2.0",
+    "grunt-contrib-uglify": "2.0.0",
+    "grunt-html2js": "0.3.6",
+    "nconf": "0.8.4",
+    "nib": "1.1.2",
+    "stylus": "0.54.5"
+  },
+  "devDependencies": {
+    "express": "4.14.0",
+    "grunt-bump": "0.8.0",
+    "grunt-git": "1.0.0",
+    "jade": "1.11.0",
+    "morgan": "1.7.0",
+    "nodemon": "1.11.0",
+    "q": "2.0.3",
+    "underscore": "1.8.3"
+  },
+  "engines": {
+    "node": "6.9.x"
+  }
+}

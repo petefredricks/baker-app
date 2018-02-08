@@ -1,0 +1,54 @@
+@require '../../../common/mixins.styl';
+@require 'nib';
+
+#error-404
+  color #333
+  font-weight 400
+  text-align center
+
+  h1, h2, h3, h4, h5, h6
+    font-weight 300
+    margin-bottom 20px
+
+  h2
+    color #777
+    font-size 100px
+    line-height 1
+    margin-top 100px
+    text-transform uppercase
+
+  h3
+    font-size 20px
+
+  h4
+    color #777
+    font-size 18px
+    margin-bottom 100px
+
+
+  a
+    i
+      margin 0 .5em
+
+@media (min-width: 768px)
+  #error-404
+    h2
+      font-size 200px
+
+    h3
+      font-size 30px
+
+    h4
+      font-size 26px
+
+
+@media (min-width: 992px)
+  #error-404
+    h2
+      font-size 300px
+
+    h3
+      font-size 40px
+
+    h4
+      font-size 30px

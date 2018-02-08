@@ -1,0 +1,24 @@
+#signup-page
+	.jumbotron
+		h1.display-4 Baker Homework
+		p.lead
+			| Please enter your phone number to log in and start receiving points.
+
+		form(ng-submit="checkNumber()")
+			.form-group
+				label.hidden Phone Number
+				input.form-control.form-control-lg(
+					field-validate="errors",
+					name="phone-number",
+					ng-model="login.phone",
+					type='text',
+					placeholder='000-000-0000'
+				)
+			.btn-group
+				button.btn.btn-success.btn-lg Submit
+
+		hr.my-4
+		p
+			| Not registered?
+		p.lead
+			a.btn.btn-primary.btn-lg(href='#', role='button') Register
