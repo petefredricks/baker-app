@@ -3,6 +3,22 @@ APP_MODULE
 		'$stateProvider',
 		function($stateProvider) {
 
+			// HELPERS
+			var getCurrentUser = ['User', '$state', function (User, $state) {
+
+				// request to server to get user profile
+				return User.load().then(
+					// success
+					function(user) {
+						return user;
+					},
+					// failure
+					function() {
+						return $state.go('app.home');
+					});
+
+			}];
+
 			// ROUTES
 
 			$stateProvider
@@ -12,10 +28,19 @@ APP_MODULE
 					controller: 'AppCtrl'
 				})
 
-				.state('app.signup', {
-					url: '/signup',
-					templateUrl: '/app/states/app/signup/signup.html',
-					controller: 'AppSignupCtrl'
+				.state('app.home', {
+					url: '/',
+					templateUrl: '/app/states/app/home/home.html',
+					controller: 'AppHomeCtrl'
+				})
+
+				.state('app.register', {
+					url: '/register',
+					templateUrl: '/app/states/app/register/register.html',
+					controller: 'AppRegisterCtrl',
+					params: {
+						phone: null
+					}
 				});
 		}
 	]);

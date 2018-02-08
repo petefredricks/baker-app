@@ -1,0 +1,59 @@
+#signup-page
+	.jumbotron
+		h1 Baker Points Machine
+		h3 Register
+		p.lead
+			| Please create an account to receive your first 50 points.
+
+		.alert.alert-danger(ng-cloak, ng-show="errorMessage") {{errorMessage}}
+
+		form(ng-submit="create()")
+
+			.form-group
+				label Phone Number
+				input.form-control.form-control-lg(
+					field-validate="errors",
+					name="phone-number",
+					ng-model="register.phone",
+					type='text',
+					placeholder='000-000-0000'
+				)
+
+			.form-group
+				label First Name
+				input.form-control.form-control-lg(
+					field-validate="errors",
+					name="first",
+					ng-model="register.nameFirst",
+					type='text',
+					placeholder='First'
+				)
+
+			.form-group
+				label Phone Number
+				input.form-control.form-control-lg(
+					field-validate="errors",
+					name="last",
+					ng-model="register.nameLast",
+					type='text',
+					placeholder='Last'
+				)
+
+			.form-group
+				label Email
+				input.form-control.form-control-lg(
+					field-validate="errors",
+					name="email",
+					ng-model="register.email",
+					type='text',
+					placeholder='email@domain.com'
+				)
+
+			.btn-group
+				button.btn.btn-success.btn-lg Register
+
+		hr
+		p
+			| Already registered? Go back to home screen.
+		p.lead
+			a.btn.btn-primary.btn-lg(href='#', ui-sref="app.home") Go Home

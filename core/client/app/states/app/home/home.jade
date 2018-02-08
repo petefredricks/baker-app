@@ -1,8 +1,10 @@
-#signup-page
+#home-page
 	.jumbotron
-		h1.display-4 Baker Homework
+		h1.display-4 Baker Points Machine
 		p.lead
 			| Please enter your phone number to log in and start receiving points.
+
+		.alert.alert-danger(ng-cloak, ng-show="errorMessage") {{errorMessage}}
 
 		form(ng-submit="checkNumber()")
 			.form-group
@@ -17,8 +19,8 @@
 			.btn-group
 				button.btn.btn-success.btn-lg Submit
 
-		hr.my-4
+		hr
 		p
 			| Not registered?
 		p.lead
-			a.btn.btn-primary.btn-lg(href='#', role='button') Register
+			a.btn.btn-primary.btn-lg(href='#', ui-sref="app.register") Register
