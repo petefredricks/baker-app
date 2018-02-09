@@ -2,10 +2,7 @@
 	"app": {
 		"optimized": true,
 		"resourceRoot": "/<%= version %>",
-		"baseUrl": "https://resumeyeti.uat-goosetail.com/",
-		"platformUrl": "https://resumeyeti-platform.uat-goosetail.com"
-	},
-	"stripe": {
-		"publicKey": "pk_test_ZKVBKNElAE1RJh7FmukDt6A8"
+		"baseUrl": "https://baker.uat-goosetail.com/",
+		"platformUrl": "https://baker-platform.uat-goosetail.com"
 	}
 }

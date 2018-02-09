@@ -7,5 +7,5 @@ module.exports = {
 	isProduction: env === 'production',
 	platformUrl: nconf.get('app:platformUrl'),
 	stripeKey: nconf.get('stripe:publicKey'),
-	title: 'Resume Yeti'
+	title: 'Baker Points'
 };
