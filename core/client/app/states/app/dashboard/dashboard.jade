@@ -1,0 +1,29 @@
+#dashboard-page
+	.jumbotron
+		h1.display-4 Baker Points
+		h3 Dashboard
+
+		#dashboard-view.row
+
+			.col-sm-6
+				.panel.panel-default
+					.panel-heading Check-Ins
+					.panel-body
+						.large {{currentUser.checkIns}}
+
+			.col-sm-6
+				.panel.panel-default
+					.panel-heading Points Earned
+					.panel-body
+						.large {{currentUser.points}}
+
+			.col-sm-6
+				.panel.panel-default
+					.panel-heading Next Time To Earn Points
+					.panel-body
+						.medium {{currentUser.lastPointCheckIn | nextTime: 'mediumDate'}}
+						.medium {{currentUser.lastPointCheckIn | nextTime: 'mediumTime'}}
+
+		hr
+		p.lead
+			a.btn.btn-primary.btn-lg(href='#', ui-sref="app.home") Go Home

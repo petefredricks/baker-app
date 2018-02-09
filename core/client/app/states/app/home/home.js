@@ -32,11 +32,16 @@ APP_MODULE
 							return;
 						}
 
+						if (err === '[Misc] check-in too quickly') {
+							$state.go('app.dashboard', { failedCheckIn: true });
+							return;
+						}
+
 						$scope.errorMessage = err;
 						$scope.$emit('hidePageLoading');
 					}
 					else {
-						$state.go('app.dashboard', data);
+						$state.go('app.dashboard');
 					}
 				});
 			};

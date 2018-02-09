@@ -41,6 +41,18 @@ APP_MODULE
 					params: {
 						phone: null
 					}
+				})
+
+				.state('app.dashboard', {
+					url: '/dashboard',
+					templateUrl: '/app/states/app/dashboard/dashboard.html',
+					controller: 'AppDashboardCtrl',
+					params: {
+						failedCheckIn: false
+					},
+					resolve: {
+						currentUser: getCurrentUser
+					}
 				});
 		}
 	]);
